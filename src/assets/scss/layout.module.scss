@@ -1,0 +1,20 @@
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+
+  .sideBar {
+    width: 22vw;
+    border-right: 1px solid #e0e0e0;;
+    background: #f2f4f5;
+    padding: 0 2rem;
+  }
+
+  .contentContainer {
+    width: 78vw;
+    // background: #f2edf3;
+
+    .outlet {
+      padding: 4rem;
+    }
+  }
+}
