@@ -3,10 +3,7 @@
   // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   thead {
-    // why this is not applied ?
-    // border-radius: 20rem 20rem 0 0;
     background-color: #f2f4f5;
-    // text-align: left;
   }
 
   th,
@@ -24,6 +21,54 @@
     border-bottom: 1px solid #e0e0e0;
     transition: background-color 0.2s ease;
 
+    .relativeInfo {
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+
+      .findInfoContainer {
+        display: flex;
+        align-items: center;
+        background: #333;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        gap: 1rem;
+        color: white;
+      }
+
+      span {
+        svg {
+          font-size: 2rem;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .actionsContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 1rem;
+
+      span {
+        cursor: pointer;
+
+        svg {
+          font-size: 2.1rem;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
     &:hover {
       background-color: #f7f7f7;
     }
@@ -32,7 +77,6 @@
 
 .actionContainer {
   display: flex;
-  // justify-content: space-between;
   align-items: center;
 
   .processBar {

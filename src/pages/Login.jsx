@@ -46,6 +46,7 @@ export default function Login() {
         return;
       }
       localStorage.setItem(token.ACCESS_TOKEN, parseRes.accessToken);
+      localStorage.setItem('username', parseRes.userInfo.username);
       navigate("/");
     } catch (error) {
       console.log(error);

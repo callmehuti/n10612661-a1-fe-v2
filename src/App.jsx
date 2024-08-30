@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 
 // style
 import "./App.css";
+import Player from "./pages/View";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             element={<DownloadTranscode />}
           ></Route>
           <Route path="/upload" element={<Upload />}></Route>
+          <Route path="/watch/:file" element={<Player/>}></Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

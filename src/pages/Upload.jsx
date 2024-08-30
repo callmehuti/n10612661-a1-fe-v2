@@ -137,8 +137,6 @@ export default function Upload() {
 
   return (
     <div className={styles.uploadContainer}>
-      {/* <div> */}
-      {/* <label htmlFor="file">Choose file to upload</label> */}
       <input
         ref={inputRef}
         type="file"
@@ -149,7 +147,6 @@ export default function Upload() {
         // style={{ display: "none" }}
         hidden
       />
-      {/* </div> */}
 
       {!files.length ? (
         <div
@@ -193,37 +190,7 @@ export default function Upload() {
                     </div>
                     <div className={styles.right}>
                       <span>{formatBytes(item?.file?.size)}</span>
-                      <div>
-                        {/* {item?.uploadStatus === uploadStatus.processing ? (
-                          <div
-                            className={styles.processBar}
-                            // style={{ width: `${item?.progress}%` }}
-                          >
-                            <div
-                              className={styles.progressPercent}
-                              style={{
-                                width: `${item.progress}%`,
-                              }}
-                            ></div>
-                          </div>
-                        ) : null} */}
-                        {/* {item?.uploadStatus === uploadStatus.select ? (
-                          <button
-                            className={styles.btn}
-                            onClick={() => onUploadFile(index)}
-                          >
-                            upload
-                          </button>
-                        ) : null}
-                        {item.uploadStatus === uploadStatus.done ? (
-                          <MdDownloadDone />
-                        ) : null}
-                        {item.uploadStatus === uploadStatus.error ? (
-                          <MdErrorOutline />
-                        ) : null} */}
-
-                        {renderStatus(item, index)}
-                      </div>
+                      <div>{renderStatus(item, index)}</div>
                       {/* Display clear button or upload progress/checkmark */}
                       <div>
                         {item.uploadStatus === uploadStatus.select ? (
@@ -248,23 +215,6 @@ export default function Upload() {
           </div>
         </>
       ) : null}
-
-      {/* <div>
-        <p>Uploading: {progress}%</p>
-      </div> */}
-
-      {/* Finalize upload or clear selection */}
-      {/* <div>
-        <button
-          onClick={onUploadFile}
-          style={{
-            pointerEvents: file ? "initial" : "none",
-            opacity: file ? 1 : 0.5,
-          }}
-        >
-          Upload
-        </button>
-      </div> */}
     </div>
   );
 }
